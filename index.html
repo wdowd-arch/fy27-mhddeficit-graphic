@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How officials say Marblehead would close the FY27 deficit</title>
+  <style>
+    :root {
+      --red: #c2261d;
+      --black: #1e1f21;
+      --white: #fdf9f4;
+      --blue: #375e97;
+      --blue-bg: #dae3ee;
+      --green: #2e6b4f;
+      --green-bg: #d6eae0;
+      --amber: #9b7d2e;
+      --amber-bg: #f2ebd5;
+      --gray-300: #c5c0ba;
+      --gray-500: #807a74;
+      --gray-700: #4a4643;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Ghost HTML card embeds inside a content container.
+       width:100% ensures the graphic fills whatever Ghost gives it.
+       max-width caps it on wide screens. */
+    .graphic {
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 20px 20px 16px;
+    }
+
+    .hed {
+      font-size: clamp(18px, 3.5vw, 22px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--black);
+      letter-spacing: -0.3px;
+    }
+
+    .dek {
+      margin-top: 4px;
+      font-size: clamp(11px, 2vw, 13px);
+      line-height: 1.45;
+      color: var(--gray-700);
+    }
+
+    .rule {
+      height: 3px;
+      background: var(--black);
+      margin: 8px 0 12px;
+    }
+
+    .wf { display: flex; flex-direction: column; gap: 6px; }
+
+    .row { display: flex; align-items: flex-start; }
+
+    .amt {
+      flex: 0 0 82px;
+      padding-right: 8px;
+      padding-top: 5px;
+      text-align: left;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .bc { flex: 1; min-width: 0; }
+
+    .bar {
+      border-radius: 4px;
+      padding: 5px 10px;
+      border: 1.5px solid transparent;
+    }
+
+    .bar .t {
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .bar .n {
+      margin-top: 1px;
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+
+    .sh {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      color: var(--gray-500);
+      padding-top: 2px;
+    }
+
+    .rd .amt { color: var(--red); }
+    .rd .bar { background: var(--red); border-color: var(--red); }
+    .rd .t { color: #fff; }
+    .rd .n { color: rgba(255,255,255,0.85); }
+
+    .gn .amt { color: var(--green); }
+    .gn .bar { background: var(--green-bg); border-color: #b3d4c3; }
+    .gn .t { color: var(--green); }
+    .gn .n { color: #3d7d5e; }
+
+    .bl .amt { color: var(--blue); }
+    .bl .bar { background: var(--blue-bg); border-color: #b3c8de; }
+    .bl .t { color: var(--blue); }
+    .bl .n { color: #4a6f94; }
+
+    .am .amt { color: var(--amber); }
+    .am .bar { background: var(--amber-bg); border: 1.5px dashed #c9b472; }
+    .am .t { color: var(--amber); }
+    .am .n { color: #8c7735; }
+
+    .sub { justify-content: center; text-align: center; }
+    .sub .amt { color: var(--red); font-size: 18px; padding-top: 1px; text-align: center; flex: none; padding-right: 8px; }
+    .sub .bc .t { font-size: 12.5px; font-weight: 700; color: var(--black); }
+    .sub .bc .n { font-size: 10.5px; color: var(--gray-700); margin-top: 1px; }
+
+    .foot {
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--gray-300);
+    }
+
+    .leg {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 9px;
+      color: var(--gray-500);
+      margin-bottom: 5px;
+    }
+
+    .li { display: flex; align-items: center; gap: 3px; }
+    .sw { width: 10px; height: 7px; border-radius: 2px; }
+    .sw-g { background: var(--green); }
+    .sw-b { background: var(--blue); }
+    .sw-a { background: var(--amber-bg); border: 1.5px dashed #c9b472; }
+
+    .src {
+      font-size: 8.5px;
+      color: var(--gray-500);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .nameplate {
+      margin-top: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .nameplate .nm-bk { color: var(--black); }
+    .nameplate .nm-rd { color: var(--red); }
+
+    /* ── Phone portrait (up to 414px) ── */
+    @media (max-width: 414px) {
+      .graphic { padding: 14px 12px 12px; }
+      .hed { font-size: 17px; }
+      .dek { font-size: 11px; }
+      .rule { margin: 6px 0 10px; }
+      .wf { gap: 5px; }
+      .amt { flex: 0 0 62px; font-size: 14px; padding-right: 6px; padding-top: 4px; }
+      .bar { padding: 4px 8px; }
+      .bar .t { font-size: 11px; }
+      .bar .n { font-size: 9.5px; }
+      .sh { font-size: 8px; letter-spacing: 1.2px; }
+      .sub .amt { font-size: 15px; }
+      .sub .bc .t { font-size: 11px; }
+      .sub .bc .n { font-size: 9.5px; }
+      .foot { margin-top: 10px; padding-top: 6px; }
+      .leg { font-size: 8px; gap: 8px; }
+      .src { font-size: 7.5px; }
+      .nameplate { font-size: 11px; }
+    }
+
+    /* ── Phone landscape / small tablet (415px–667px) ── */
+    @media (min-width: 415px) and (max-width: 667px) {
+      .graphic { padding: 16px 16px 14px; }
+      .hed { font-size: 18px; }
+      .dek { font-size: 11.5px; }
+      .amt { flex: 0 0 72px; font-size: 15px; padding-right: 7px; }
+      .bar .t { font-size: 12px; }
+      .bar .n { font-size: 10px; }
+      .sub .amt { font-size: 16px; }
+      .sub .bc .t { font-size: 12px; }
+      .sub .bc .n { font-size: 10px; }
+      .nameplate { font-size: 12px; }
+    }
+
+    /* ── Tablet portrait (668px–820px) ── */
+    @media (min-width: 668px) and (max-width: 820px) {
+      .graphic { padding: 20px 20px 16px; max-width: 580px; }
+    }
+
+    /* ── Tablet landscape / small desktop (821px–1024px) ── */
+    @media (min-width: 821px) and (max-width: 1024px) {
+      .graphic { padding: 20px 20px 16px; max-width: 580px; }
+    }
+
+    /* ── Desktop (1025px+) — default styles apply ── */
+
+    /* ── Landscape orientation on phones: tighten vertical space ── */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .graphic { padding: 10px 16px 10px; }
+      .hed { font-size: 17px; }
+      .dek { font-size: 11px; }
+      .rule { margin: 4px 0 8px; }
+      .wf { gap: 4px; }
+      .bar { padding: 3px 8px; }
+      .bar .n { font-size: 9.5px; }
+      .foot { margin-top: 8px; padding-top: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="graphic">
+
+    <div class="hed">How officials say Marblehead would close the FY27 deficit</div>
+    <div class="dek">State law requires Town Meeting to adopt a balanced budget. Officials project about $96.5 million in net available revenue against roughly $104.2 million in requested spending. The schools have already cut to reach level funding. Officials say the following measures would close the remaining gap and bring the budget into balance.</div>
+    <div class="rule"></div>
+
+    <div class="wf">
+
+      <div class="row rd">
+        <div class="amt">~$7.7M</div>
+        <div class="bc"><div class="bar">
+          <div class="t">FY27 projected townwide deficit</div>
+          <div class="n">Working framework as of March; the January State of the Town gap was $8.47 million before February budget adjustments</div>
+        </div></div>
+      </div>
+
+      <div class="sh">School side</div>
+
+      <div class="row gn">
+        <div class="amt">&minus;$1.7M</div>
+        <div class="bc"><div class="bar">
+          <div class="t">School cuts already made</div>
+          <div class="n">District cut to reach level funding at about $49.1 million; reductions eliminated 14.75 FTE positions, including five teachers and one maintenance worker</div>
+        </div></div>
+      </div>
+
+      <div class="row bl">
+        <div class="amt">&minus;$1.5M</div>
+        <div class="bc"><div class="bar">
+          <div class="t">Additional school share under finance framework</div>
+          <div class="n">Once pensions, health insurance, retiree benefits, Medicare and OPEB are allocated proportionally, schools account for about 63 percent of functional spending; schools are still working through what these reductions look like</div>
+        </div></div>
+      </div>
+
+      <div class="row sub">
+        <div class="amt">~$4.4M</div>
+        <div class="bc">
+          <div class="t">Remaining municipal-side gap</div>
+          <div class="n">Without the trash fee, town-side cuts total about $3.83 million and roughly 40 positions — a 21 percent workforce reduction</div>
+        </div>
+      </div>
+
+      <div class="row gn">
+        <div class="amt">&minus;$600K</div>
+        <div class="bc"><div class="bar">
+          <div class="t">February budget adjustments</div>
+          <div class="n">$475,000 health insurance reduction after GIC votes, $40,000 retiree Medicare reimbursement reduction and $250,000 in stabilization funding removed — partially offset by $165,000 in department-level add-backs</div>
+        </div></div>
+      </div>
+
+      <div class="row sub">
+        <div class="amt">~$3.8M</div>
+        <div class="bc">
+          <div class="t">Working municipal gap</div>
+        </div>
+      </div>
+
+      <div class="sh">Proposed municipal-side actions</div>
+
+      <div class="row bl">
+        <div class="amt">&minus;$2M</div>
+        <div class="bc"><div class="bar">
+          <div class="t">Curbside trash user fee</div>
+          <div class="n">About $255 per household per year; shifts $2,037,184 off the general fund and reduces town-side cuts from about $3.83 million to about $1.83 million</div>
+        </div></div>
+      </div>
+
+      <div class="row am">
+        <div class="amt">~$1.8M</div>
+        <div class="bc"><div class="bar">
+          <div class="t">Remaining amount for town to resolve</div>
+          <div class="n">Gross cuts total about $2.23 million — $1 million officials do not expect to restore and about $1.23 million an override could address — but roughly $400,000 in unemployment costs partially offsets those savings, netting to about $1.8 million</div>
+        </div></div>
+      </div>
+
+    </div>
+
+    <div class="foot">
+      <div class="leg">
+        <div class="li"><div class="sw sw-g"></div> Already taken</div>
+        <div class="li"><div class="sw sw-b"></div> Proposed, more concrete</div>
+        <div class="li"><div class="sw sw-a"></div> Unresolved or flexible</div>
+      </div>
+      <div class="src">Sources: Marblehead Finance Committee townside cut scenarios spreadsheet and working budget framework, March 2026; State of the Town presentation, January 2026.</div>
+      <div class="nameplate">
+        <span class="nm-bk">The Marblehead</span> <span class="nm-rd">INDEPENDENT</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
