@@ -1,2 +1,2 @@
 # fy27-mhddeficit-graphic
-A mobile-friendly web graphic breaking down the cuts, fee proposals, and remaining gap in Marblehead’s FY27 budget plan as of March 17, 2026.
+This project is a standalone responsive HTML and CSS graphic showing how Marblehead officials say the town would close the FY27 deficit as of March 17, 2026, including school cuts already made, proposed municipal-side actions, and the remaining unresolved gap.
